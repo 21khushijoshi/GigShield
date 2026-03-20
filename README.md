@@ -148,10 +148,10 @@ Final Premium = Base Tier Premium × City Risk Multiplier × Zone Risk Score × 
 ```
 
 **Factors used:**
-- **City Risk Multiplier** — cities with higher historical disruption frequency (e.g., Mumbai monsoon, Delhi pollution) have higher multipliers (1.0x–1.4x)
-- **Zone Risk Score** — hyperlocal risk score per delivery zone (flood-prone areas, heat corridors)
-- **Historical Disruption Index** — rolling 52-week average of payable disruption days in that geography
-- **Rider Activity Pattern** — riders who are consistently active on disruption days (and thus lose more) get marginally higher premiums, fairly priced
+- **City Risk Multiplier** - cities with higher historical disruption frequency (e.g., Mumbai monsoon, Delhi pollution) have higher multipliers (1.0x–1.4x)
+- **Zone Risk Score** - hyperlocal risk score per delivery zone (flood-prone areas, heat corridors)
+- **Historical Disruption Index** - rolling 52-week average of payable disruption days in that geography
+- **Rider Activity Pattern** - riders who are consistently active on disruption days (and thus lose more) get marginally higher premiums, fairly priced
 
 Premiums are **recalculated every 4 weeks** using updated rolling data. Riders are notified 3 days before renewal with the new rate and can opt out.
 
@@ -159,7 +159,7 @@ Premiums are **recalculated every 4 weeks** using updated rolling data. Riders a
 
 ## Parametric Triggers
 
-Parametric insurance pays out automatically when a **measurable external condition** crosses a defined threshold — no claim form, no adjuster, no wait.
+Parametric insurance pays out automatically when a **measurable external condition** crosses a defined threshold, no claim form, no adjuster, no wait.
 
 ### GigShield Trigger Matrix
 
@@ -177,7 +177,7 @@ Parametric insurance pays out automatically when a **measurable external conditi
 - Consecutive disruptions (e.g., 3-day flood): treated as one event, capped at 2-day payout
 
 **Daily Average Calculation:**
-Each rider's "daily average earnings" is computed from their platform activity data (mocked in Phase 1) — last 30 days' average, excluding Sundays and platform-declared holidays.
+Each rider's "daily average earnings" is computed from their platform activity data (mocked in Phase 1) — last 30 days'   average, excluding Sundays and platform-declared holidays.
 
 ---
 
@@ -327,11 +327,11 @@ A lightweight NLP-based notification system sends riders contextual alerts in **
 
 GigShield **strictly excludes** the following (by design and technical enforcement):
 
-- ❌ Health insurance or hospitalisation cover
-- ❌ Life insurance or accidental death benefits
-- ❌ Vehicle repair or maintenance coverage
-- ❌ Any coverage for personal negligence or voluntary non-working days
-- ❌ Payouts for disruptions not corroborated by external data sources
+- Health insurance or hospitalisation cover
+- Life insurance or accidental death benefits
+- Vehicle repair or maintenance coverage
+- Any coverage for personal negligence or voluntary non-working days
+- Payouts for disruptions not corroborated by external data sources
 
 These exclusions are enforced at the policy creation layer — the system will not generate a policy or process a payout for any excluded event type.
 
@@ -347,34 +347,3 @@ These exclusions are enforced at the policy creation layer — the system will n
 | **Accessibility** | App download, documentation | PWA via WhatsApp link |
 | **Affordability** | ₹200–500/month | ₹29–79/week (₹120–320/month) |
 | **AI integration** | None | Risk scoring, fraud detection, event validation |
-
----
-
-## Repository Structure
-
-```
-gigshield/
-├── frontend/          # React PWA
-│   ├── src/
-│   │   ├── pages/     # Onboarding, Dashboard, Policy, Payouts
-│   │   ├── components/
-│   │   └── hooks/
-├── backend/
-│   ├── api/           # Node.js Express REST API
-│   ├── ml/            # Python FastAPI — risk scoring + fraud detection
-│   └── workers/       # Disruption monitoring background jobs
-├── data/
-│   ├── mock/          # Simulated platform + rider data
-│   └── seeds/         # City risk scores, zone mappings
-├── docs/
-│   └── architecture.png
-└── README.md
-```
-
----
-
-## Contact & Team
-
-> Built for the AI Insurance Hackathon — India Gig Economy Track
-
-*GigShield — Because every delivery partner deserves a safety net.*
