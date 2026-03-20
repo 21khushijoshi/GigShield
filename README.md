@@ -1,4 +1,4 @@
-# GigShield — AI-Powered Parametric Income Insurance for India's Delivery Partners
+# GigShield - AI-Powered Parametric Income Insurance for India's Delivery Partners
 
 **Protecting the last mile, one week at a time.**
 
@@ -24,10 +24,10 @@ GigShield is an AI-enabled parametric insurance platform that safeguards **food 
 
 ## The Problem
 
-India's food delivery ecosystem runs on hundreds of thousands of gig workers who earn ₹15,000–₹25,000/month on average. Their income is entirely event-driven — no rides, no pay. When disruptions hit:
+India's food delivery ecosystem runs on hundreds of thousands of gig workers who earn ₹15,000–₹25,000/month on average. Their income is entirely event-driven, no rides, no pay. When disruptions hit:
 
-- A single day of heavy rain can wipe out ₹600–₹1,000 in earnings
-- AQI spikes above 400 reduce outdoor rider hours by 40–60%
+- A single day of heavy rain can wipe out ₹600-₹1,000 in earnings
+- AQI spikes above 400 reduce outdoor rider hours by 40-60%
 - A local curfew or bandh can zero out an entire day's income
 
 There is **no financial safety net** today. Banks won't lend. Platforms don't compensate. Family savings erode. GigShield changes that.
@@ -36,11 +36,11 @@ There is **no financial safety net** today. Banks won't lend. Platforms don't co
 
 ## Persona & Scenarios
 
-**Chosen Segment:** Food Delivery Partners — Zomato & Swiggy riders in Tier-1 and Tier-2 Indian cities.
+**Chosen Segment:** Food Delivery Partners - Zomato & Swiggy riders in Tier-1 and Tier-2 Indian cities.
 
 **Why this segment?**
 - Largest and most active gig workforce category in India (~5 million active riders)
-- Extremely weather-sensitive — rain, heat, and pollution directly halt deliveries
+- Extremely weather-sensitive - rain, heat, and pollution directly halt deliveries
 - Strong smartphone penetration with existing app familiarity
 - Weekly payout culture already established by platforms
 
@@ -54,17 +54,17 @@ There is **no financial safety net** today. Banks won't lend. Platforms don't co
 
 ### Disruption Scenarios
 
-**Scenario 1 — Heavy Rainfall (Bengaluru, July)**
-> Ravi's city experiences IMD Red Alert rainfall. Deliveries drop 70% for 2 days. GigShield's weather API detects ≥ 60mm/day rainfall in Ravi's active zone. Payout of ₹800 (2-day income estimate) is automatically triggered and credited to his UPI within 4 hours — no claim form required.
+**Scenario 1 - Heavy Rainfall (Bengaluru, July)**
+> Ravi's city experiences IMD Red Alert rainfall. Deliveries drop 70% for 2 days. GigShield's weather API detects ≥ 60mm/day rainfall in Ravi's active zone. Payout of ₹800 (2-day income estimate) is automatically triggered and credited to his UPI within 4 hours, no claim form required.
 
-**Scenario 2 — AQI Pollution Spike (Delhi, November)**
+**Scenario 2 - AQI Pollution Spike (Delhi, November)**
 > Arjun's city crosses AQI 400 (Severe+). Government advisories recommend no outdoor activity. GigShield detects this via real-time AQI API. Arjun's policy auto-triggers a 1-day partial payout of ₹350, proportional to expected earnings.
 
-**Scenario 3 — Civic Bandh / Curfew (Chennai, January)**
+**Scenario 3 - Civic Bandh / Curfew (Chennai, January)**
 > A sudden state bandh is declared. Meena's delivery zone is locked. GigShield's civic event monitor (scraping government notifications + news API) flags the disruption. A full-day payout is processed automatically.
 
-**Scenario 4 — Extreme Heat (Rajasthan, May)**
-> Temperature crosses 46°C — above GigShield's heat threshold. Meena cannot safely ride. A heat-day payout is triggered, covering 60% of her average daily earning for up to 2 days per week.
+**Scenario 4 - Extreme Heat (Rajasthan, May)**
+> Temperature crosses 46°C - above GigShield's heat threshold. Meena cannot safely ride. A heat-day payout is triggered, covering 60% of her average daily earning for up to 2 days per week.
 
 ---
 
@@ -98,7 +98,7 @@ There is **no financial safety net** today. Banks won't lend. Platforms don't co
   → IMD Weather API (rainfall, temperature, cyclone alerts)
   → CPCB AQI API (Air Quality Index by city)
   → Civic Event Monitor (news API + government bulletin scraper)
-  → Platform Activity Feed (Swiggy/Zomato mock API — delivery volume drop signals)
+  → Platform Activity Feed (Swiggy/Zomato mock API - delivery volume drop signals)
   ↓
 
   [4. PARAMETRIC TRIGGER EVALUATION]
@@ -112,7 +112,7 @@ There is **no financial safety net** today. Banks won't lend. Platforms don't co
   [5. AUTOMATIC PAYOUT]
    ↓
   Payout initiated without rider filing a claim
-  → Credited to registered UPI ID within 2–4 hours
+  → Credited to registered UPI ID within 2-4 hours
   → Rider receives push notification with payout summary
   → Payout capped at 2 days' equivalent per disruption event
   ↓
@@ -137,7 +137,7 @@ GigShield's pricing is **weekly** to match the payout rhythm of Zomato/Swiggy ri
 | **Standard** | ₹49 | ₹900 | Rain + AQI + Heat + Bandh |
 | **Pro** | ₹79 | ₹1,500 | All triggers + extended 3-day coverage |
 
-> **Design rationale:** ₹29–79/week is 1–2% of average weekly earnings — affordable, and positioned as a "safety coffee" expense.
+> **Design rationale:** ₹29–79/week is 1-2% of average weekly earnings, affordable, and positioned as a "safety coffee" expense.
 
 ### Dynamic Premium Calculation
 
@@ -148,7 +148,7 @@ Final Premium = Base Tier Premium × City Risk Multiplier × Zone Risk Score × 
 ```
 
 **Factors used:**
-- **City Risk Multiplier** - cities with higher historical disruption frequency (e.g., Mumbai monsoon, Delhi pollution) have higher multipliers (1.0x–1.4x)
+- **City Risk Multiplier** - cities with higher historical disruption frequency (e.g., Mumbai monsoon, Delhi pollution) have higher multipliers (1.0x-1.4x)
 - **Zone Risk Score** - hyperlocal risk score per delivery zone (flood-prone areas, heat corridors)
 - **Historical Disruption Index** - rolling 52-week average of payable disruption days in that geography
 - **Rider Activity Pattern** - riders who are consistently active on disruption days (and thus lose more) get marginally higher premiums, fairly priced
@@ -177,23 +177,23 @@ Parametric insurance pays out automatically when a **measurable external conditi
 - Consecutive disruptions (e.g., 3-day flood): treated as one event, capped at 2-day payout
 
 **Daily Average Calculation:**
-Each rider's "daily average earnings" is computed from their platform activity data (mocked in Phase 1) — last 30 days'   average, excluding Sundays and platform-declared holidays.
+Each rider's "daily average earnings" is computed from their platform activity data - last 30 days' average, excluding Sundays and platform-declared holidays.
 
 ---
 
 ## Platform Choice: Web vs Mobile
 
-**Decision: Progressive Web App (PWA) — Mobile-first Web**
+**Decision: Progressive Web App (PWA) - Mobile-first Web**
 
 ### Rationale
 
 | Criterion | Native App | PWA (Our Choice) |
 |---|---|---|
 | Install friction | High (App Store / Play Store review) | Low (browser bookmark or install prompt) |
-| Rider familiarity | Moderate | High — riders already use mobile browsers |
+| Rider familiarity | Moderate | High - riders already use mobile browsers |
 | Development speed | Slow (2 codebases: iOS + Android) | Fast (single codebase) |
 | Offline support | Strong | Good (Service Workers) |
-| Distribution | Gated | Instant — shareable via WhatsApp link |
+| Distribution | Gated | Instant - shareable via WhatsApp link |
 | Low-end device support | App size can be heavy | Lightweight, works on 2GB RAM devices |
 
 **Key insight:** Delivery partners predominantly use low-to-mid-range Android phones. They share WhatsApp links and distrust downloading unknown APKs. A PWA delivered via a WhatsApp link from their platform (Swiggy/Zomato) partnership is the **lowest-friction onboarding path**.
@@ -234,7 +234,7 @@ The PWA supports:
 
 | Signal | Method |
 |---|---|
-| GPS location during disruption | Platform API mock — was rider's last-known location in an affected zone? |
+| GPS location during disruption | Platform API mock - was rider's last-known location in an affected zone? |
 | Activity pattern anomaly | ML anomaly detector: is this rider's claim behavior statistically consistent with peers in same zone? |
 | Duplicate claim detection | Hash-based dedup on (rider ID, event ID, date) |
 | Velocity check | No more than 2 payouts per week per rider; flag if > 80% of weeks have payouts (suspicious) |
@@ -261,40 +261,40 @@ A lightweight NLP-based notification system sends riders contextual alerts in **
 
 ### Frontend
 - **React.js** (PWA with Vite)
-- **Tailwind CSS** — mobile-first UI
-- **Service Workers** — offline support
+- **Tailwind CSS** - mobile-first UI
+- **Service Workers** - offline support
 - **Push Notifications API**
 
 ### Backend
-- **Node.js + Express** — REST API server
-- **Python (FastAPI)** — AI/ML inference service (risk scoring, fraud detection)
-- **PostgreSQL** — rider profiles, policies, payout records
-- **Redis** — real-time event cache, disruption state management
+- **Node.js + Express** - REST API server
+- **Python (FastAPI)** - AI/ML inference service (risk scoring, fraud detection)
+- **PostgreSQL** - rider profiles, policies, payout records
+- **Redis** - real-time event cache, disruption state management
 
 ### AI/ML
-- **XGBoost** — risk profiling and premium calculation
-- **scikit-learn (Isolation Forest)** — fraud/anomaly detection
-- **Pandas + NumPy** — data pipelines
+- **XGBoost** - risk profiling and premium calculation
+- **scikit-learn (Isolation Forest)** - fraud/anomaly detection
+- **Pandas + NumPy** - data pipelines
 
 ### External Integrations (Free Tier / Mocked)
-- **OpenWeatherMap API** — temperature, rainfall data (free tier)
-- **CPCB AQI API** — air quality index (open government API)
-- **IMD Bulletins** — weather alert scraper (public data)
-- **NewsAPI** — civic event detection
-- **Razorpay (Sandbox)** — UPI AutoPay for premium collection and payout disbursement
-- **DigiLocker API (Mock)** — Aadhaar-based KYC
-- **Platform APIs (Mocked)** — Zomato/Swiggy rider ID verification and activity signals
+- **OpenWeatherMap API** - temperature, rainfall data (free tier)
+- **CPCB AQI API** - air quality index (open government API)
+- **IMD Bulletins** - weather alert scraper (public data)
+- **NewsAPI** - civic event detection
+- **Razorpay (Sandbox)** - UPI AutoPay for premium collection and payout disbursement
+- **DigiLocker API (Mock)** - Aadhaar-based KYC
+- **Platform APIs (Mocked)** - Zomato/Swiggy rider ID verification and activity signals
 
 ### Infrastructure
-- **Docker** — containerised services
-- **GitHub Actions** — CI/CD
-- **Render / Railway** — low-cost cloud deployment for demo
+- **Docker** - containerised services
+- **GitHub Actions** - CI/CD
+- **Render / Railway** - low-cost cloud deployment for demo
 
 ---
 
 ## Development Plan
 
-### Phase 1 — MVP (Current Scope, 4 Weeks)
+### Phase 1 - MVP (Current Scope, 4 Weeks)
 
 | Week | Deliverable |
 |---|---|
@@ -302,24 +302,6 @@ A lightweight NLP-based notification system sends riders contextual alerts in **
 | **Week 2** | Disruption monitoring engine (Weather + AQI APIs), parametric trigger logic, payout simulation |
 | **Week 3** | Fraud detection (rule-based + Isolation Forest MVP), admin dashboard, analytics views |
 | **Week 4** | End-to-end integration testing, PWA polish, demo video, README finalisation |
-
-**Phase 1 Scope (Minimal but functional demo):**
-- ✅ Onboarding with mock KYC
-- ✅ Weekly policy creation with dynamic pricing (heuristic model)
-- ✅ Live weather/AQI trigger monitoring for 3 Indian cities
-- ✅ Automatic payout simulation (Razorpay sandbox)
-- ✅ Rider dashboard
-- ✅ Basic fraud detection (dedup + velocity checks)
-- ✅ Admin analytics dashboard
-
-### Phase 2 — Production Readiness (Post-Hackathon)
-
-- Real Aadhaar KYC integration (DigiLocker)
-- ML-trained risk model on synthetic rider dataset
-- Full fraud ring detection (graph clustering)
-- Regional language support (Hindi, Tamil, Kannada)
-- IRDAI regulatory sandbox filing
-- Platform partnership APIs (Swiggy/Zomato)
 
 ---
 
@@ -333,7 +315,7 @@ GigShield **strictly excludes** the following (by design and technical enforceme
 - Any coverage for personal negligence or voluntary non-working days
 - Payouts for disruptions not corroborated by external data sources
 
-These exclusions are enforced at the policy creation layer — the system will not generate a policy or process a payout for any excluded event type.
+These exclusions are enforced at the policy creation layer - the system will not generate a policy or process a payout for any excluded event type.
 
 ---
 
@@ -341,9 +323,9 @@ These exclusions are enforced at the policy creation layer — the system will n
 
 | Dimension | Existing Options | GigShield |
 |---|---|---|
-| **Claim process** | Manual, 7–30 days | Zero-touch, 2–4 hours |
-| **Pricing cycle** | Monthly / annual | Weekly — matches rider income |
+| **Claim process** | Manual, 7-30 days | Zero-touch, 2-4 hours |
+| **Pricing cycle** | Monthly / annual | Weekly - matches rider income |
 | **Coverage relevance** | Generic health/life | Hyperlocal income disruption |
 | **Accessibility** | App download, documentation | PWA via WhatsApp link |
-| **Affordability** | ₹200–500/month | ₹29–79/week (₹120–320/month) |
+| **Affordability** | ₹200-500/month | ₹29-79/week (₹120-320/month) |
 | **AI integration** | None | Risk scoring, fraud detection, event validation |
