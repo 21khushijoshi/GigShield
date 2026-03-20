@@ -4,6 +4,8 @@
 
 GigShield is an AI-enabled parametric insurance platform that safeguards **food delivery partners** (Zomato / Swiggy) against income loss caused by uncontrollable external disruptions like, extreme weather, flooding, severe pollution, and sudden civic events like curfews or zone lockdowns. When the world stops, their income shouldn't.
 
+---
+
 ## 📌 Table of Contents
 
 1. [The Problem](#the-problem)
